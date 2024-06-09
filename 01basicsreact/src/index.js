@@ -8,7 +8,7 @@ function InbuiltComponent(){
     )
 }
 
-//The object can never be initialized here since the html is (asked) & converted to object itself by BABEL transpiler
+//The object can never be defined here since the html is (expected) & converted to object itself by BABEL transpiler
 
 //Elements are understood
 const anotherElement = (
