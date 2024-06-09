@@ -1,1 +1,1 @@
-First App
+Learning React.js through projects 
