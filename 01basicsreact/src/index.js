@@ -39,7 +39,7 @@ root.render(
     <>
     <App />
     <InbuiltComponent />
-    {anotherElement}
-    {reactElement}
+    {anotherElement} //Elements/Variable passed here
+    {reactElement} 
     </>
 );
