@@ -1,6 +1,7 @@
 function customRender(reactElement, container){
 
     //Basic approach
+
     // const domElement = document.createElement(reactElement.type)
     // domElement.innerHTML = reactElement.children
     // domElement.setAttribute('href', reactElement.props.href)
@@ -9,12 +10,13 @@ function customRender(reactElement, container){
     // container.appendChild(domElement)
 
 
-    // using forin to create new attributes as required
+    // using for-in to create new attributes as required
+
     const domElement = document.createElement(reactElement.type)
     domElement.innerHTML = reactElement.children
     for (const prop in reactElement.props) {
-      if (prop === 'children') 
-        continue;  //if children is given in props, it avoids it iteration 
+      if (prop === 'children')  //if so children is inside props, to avoid its iteration 
+        continue;
       domElement.setAttribute(prop, reactElement.props[prop]) //allows unlimited attributes to create in reactELement obj.
     }
     container.appendChild(domElement)
