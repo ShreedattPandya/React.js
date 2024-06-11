@@ -8,15 +8,27 @@ function App() {
   //hooks: updates UI elements all over the project in once
   // const [initial variable, method that updates variable] = useState(0)
 
-  let [counter, setCount] = useState(0)
+  const [counter, setCounter] = useState(0)
  
   const addValue = () => {
-    setCount(counter + 1) 
+    setCounter(counter + 1) 
+
+    //SetCounter Method Attribute(prevCounter): 
+
+    // setCount(counter + 1) 
+    // setCount(counter + 1) 
+    // Repetion won't work since useState sends updates to UI/variables in batches.Batches ignores repetition through fibre algo 
+
+    //hence prevCounter: stores the recent value of setter method's variable. It's attribute of setter method
+    // setCounter((prevCounter) => prevCounter + 1)
+    //or
+    // setCounter((counter => counter + 1)) //Attribute name may vary
+
   }
 
   const removeValue = () => {
     if(counter > 0){  //No negative number is allowed in counter
-    setCount(counter - 1)
+    setCounter(counter - 1)
     }
   }
 
