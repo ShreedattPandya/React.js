@@ -7,8 +7,8 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false)
   const [password, setPassword] = useState("")
 
-  // useRef hook
-  const passowordRef = useRef(null)
+  // useRef hook - reference a value that won't be re-rendering
+  const passwordRef = useRef(null)
 
   // useCallback ultimately optimises code that runs many times through cache
   const passwordGenerator = useCallback(() => { //useCallback save fun in cache betn re-renders
@@ -26,9 +26,9 @@ function App() {
   }, [length, numberAllowed,charAllowed, setPassword]) 
       
   const copyPasswordToClipboard = useCallback(() => {
-    passowordRef.current?.select(0,23) // its actually selected by we're not using it 
-    window.navigator.clipboard.writeText(password)
-    // passowordRef.current?.setSelectRange(0,23)
+    passwordRef.current?.select(0,23) // its actually selected by we're not using seelcted part 
+    window.navigator.clipboard.writeText(password) //window wont't work for server side but client
+    // passwordRef.current?.setSelectRange(0,23)
   }, [password])
 
   //useEffect makes calls fun if any change in dependencies
@@ -47,7 +47,7 @@ function App() {
         className="outline-none w-full py-1 px-3" 
         placeholder='Slide the length for password'
         readOnly
-        ref={passowordRef} //gives/takes value to useRef hook(Kind of agent everywhere providing values)
+        ref={passwordRef} //gives/takes value to useRef hook(Kind of agent everywhere providing values)
         />
         <button
         onClick={copyPasswordToClipboard}
