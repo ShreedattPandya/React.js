@@ -27,10 +27,10 @@ function App() {
   return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url('https://img.freepik.com/free-vector/gradient-cryptocurrency-concept_23-2149215736.jpg?w=996&t=st=1719397042~exp=1719397642~hmac=d883d382c4cf7454643a776c18f5e08309890daba51a35ed328b329b4262d580')` }}
+      style={{ backgroundImage: `url('https://img.freepik.com/free-vector/global-virtual-currency-sign-techno-concept-background-design_1017-52482.jpg?w=900&t=st=1719942783~exp=1719943383~hmac=4ca59a202b275470cf158e185368ee89ac79f3ef0ac02768270ecb14075c5cf1')` }}
     >
       <div className="w-full">
-        <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+        <div className="w-full max-w-lg mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
             onSubmit={(e) => {
               e.preventDefault();
